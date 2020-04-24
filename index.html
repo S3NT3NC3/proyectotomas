@@ -1,0 +1,628 @@
+<html>
+<head>
+<title>Proyecto</title>
+</head>
+<style type="text/css">
+.par {
+	background-color: yellow;
+}
+.impar {
+	background-color: #FC0;
+}
+</style>
+<script type="text/javascript">
+function aplicarEstilosTabla() {
+	var tabla1 = document.getElementById("tabla1");
+	var celdas = tabla1.getElementsByTagName("tr");
+	for (var i=0; i<celdas.length; i++) {
+		if (i%2==0) {
+			celdas[i].className = "par";
+		} else{
+			celdas[i].className = "impar";
+		}
+	}
+}
+</script>
+</head>
+
+<body onload="aplicarEstilosTabla()">
+<table width="200" border="1">
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+         <td><table width="332" border="1" id="tabla1">
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+
+
+
+
+
+<style type="text/css">
+#apDiv1 {
+	position: absolute;
+	width: 374px;
+	height: 282px;
+	z-index: 1;
+	left: 232px;
+	top: 50px;
+	background-color: red;
+	display: none;
+}
+</style>
+</head>
+
+<body>
+<a href="javascript:window.print()">Imprimir</a>
+<br />
+<input type="button" onclick="window.location.href='http://www.video2brain.com/es'" value="V2B" />
+
+<a href="javascript.history.back()">Back</a>
+
+<input type="button" onclick="document.getElementById("apDiv1").style.display = 'block'" value="Abrir PopInter" />
+
+
+<div id="apDiv1">
+  <p>Esto es una ventana</p>
+  <p>&nbsp;</p>
+</div>
+</body>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+#estado {
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 5px;
+	background-color: yellow;
+	color: red;
+	font-weight: bold;
+}
+</style>
+<script type="text/javascript">
+function llenarCaja() {
+	var caja = document.getElementById("caja");
+	caja.innerHTML = "Esto es texto desde JavaScript<button>Presioname</button>";
+}
+function alertar(mensaje) {
+	var estado = document.getElementById("estado");
+	estado.style.display = "block";
+	estado.innerHTML = mensaje + "<br />" + estado.innerHTML;
+}
+</script>
+</head>
+
+<body>
+<a href="javascript:llenarCaja()">Llenar Caja</a>
+
+<div id="caja"></div>
+
+<div id="estado"></div>
+<input type="button" onclick="alertar('Ha ocurrido un problema')" value="Generar Problema"/>
+
+<a href='javascript:alertar("Este mensaje fue generado desde un link")'>Generar Mensaje</a>
+
+
+
+
+
+
+<script type="text/javascript">
+function inicializar() {
+	var link = document.getElementById("linkV2B");
+	var caja = document.getElementById("cajaContenido");
+	link.href = "http://avellano.fis.usal.es/~lalonso/RNA/index.htm";
+}
+function cambiarLink() {
+	document.getElementById("linkV2B").href = "https://energia-nuclear.net/";
+}
+</script>
+
+<br>
+<br>
+<body onload="inicializar()">
+<div id= "cajaContenido">
+
+<a id="linkV2B" href="https://energia-nuclear.net/">La energía nuclear</a>
+<input type="button" onclick="cambiarLink()"/>
+<script type="text/javascript">
+function focusIn(input) {
+	input.className='enfoco';
+}
+
+function blurOut(input) {
+	input.className=' ';
+}
+</script>
+<style type="text/css">
+
+input {
+	border: 1px solid gray;
+	background-color: #CCC;
+	height: 20px;
+}
+
+input.enfoco {
+	background-color: #CF6;
+	border: 1px solid green;
+}
+.caja {
+	border: 1px solid gray;
+	padding: 10px;
+}
+</style>
+
+</head>
+
+<body onload="document.getElementById('contenedor').className='caja'">
+
+<div id="contenedor">
+
+<label>
+Nombre: <input type="text" id="txtNombre" onfocus="focusIn(this)" onblur="blurOut(this)"/>
+</label>
+<label>
+Apellido:</label><input type="text" id="txtApellido" onfocus="focusIn(this)" onblur="blurOut(this)"/> 
+
+
+
+<br>
+<br>
+
+
+
+
+
+
+	
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<p align="center">
+<img src="C:\Users\DELL\Desktop\proyectoT\imgt3.jpg" width=245 height=132>
+</p>
+
+
+
+<br>
+<br>
+
+<!-- codigo del proyecto con la informacion del tema que me toco -->
+
+
+
+<h1 align="center">Energía Nuclear </h1>
+
+
+<h2 align="center">Que es la energía nuclear </h2>
+
+	<p> <FONT COLOR="Black" SIZE="3" FACE = "Exotc350 Bd BT">La energía nuclear o atómica es la que se libera espontánea o artificialmente en las reacciones nucleares. Sin embargo, este término engloba otro significado que es el aprovechamiento de dicha energía para otros fines, tales como la obtención de energía eléctrica, energía térmica y energía mecánica a partir de reacciones atómicas. Así, es común referirse a la energía nuclear no solo como el resultado de una reacción, sino como un concepto más amplio que incluye los conocimientos y técnicas que permiten la utilización de esta energía por parte del ser humano.
+
+Estas reacciones se dan en los núcleos atómicos de algunos isótopos de ciertos elementos químicos (radioisótopos), siendo la más conocida la fisión del uranio-235 (235U), con la que funcionan los reactores nucleares, y la más habitual en la naturaleza, en el interior de las estrellas, la fusión del par deuterio-tritio (2H-3H). Sin embargo, para producir este tipo de energía aprovechando reacciones nucleares pueden ser utilizados muchos otros isótopos de varios elementos químicos, como el torio-232, el plutonio-239, el estroncio-90 o el polonio-210 (232Th, 239Pu, 90Sr, 210Po; respectivamente).
+<br><br></FONT></p>
+
+<p align="center">
+<img src="C:\Users\DELL\Desktop\proyectoT\imgt1.jpg" width=245 height=132>
+</p>
+
+
+
+	<h2 align="center"> ventajas de la energía nuclear por fisión </h2>
+
+<p> <FONT COLOR="Black" SIZE="3" FACE = "Exotc350 Bd BT">Como ya hemos adelantado antes, este tipo de energía presenta ciertas mejoras y avances para los humanos. Así, estas son las principales ventajas de la energía nuclear por fisión y de las centrales nucleares:
+<br><br><br>-Genera una gran cantidad de electricidad
+Lo primero que nos viene a la mente pensando en la parte positiva de este tema es que se obtiene una gran cantidad de energía eléctrica, por lo que más personas pueden acceder a ella, algo muy importante hoy en día y, sobre todo, en lugares donde el clima es muy frío.
+
+<br>   Además, una central nuclear está generando electricidad casi todo el año, aproximadamente un 90% de este. Esto hace que los precios no sean tan cambiantes, algo que sí sucede en el caso de los combustibles fósiles, ya que dependen de la disponibilidad y están mucho más cerca de agotarse.
+
+<br><br><br>-No se producen gases de efecto invernadero
+Durante la obtención de la energía atómica, desde las centrales nucleares, no se producen gases de efecto invernadero, como el CO2 o el N2O. El humo blanquecino que sale de las chimeneas de las centrales nucleares no es humo con gases, sino que en realidad se trata de vapor de agua, ya que se usa agua durante el proceso de fisión de los núcleos y esta se evapora. Por tanto, las chimeneas no contaminan el aire.
+
+<br><br><br>-Se reduce la dependencia del petróleo
+el hecho de producir más cantidad de electricidad y otras energías, como la térmica, con energía atómica hace que se reduzca el uso de combustibles fósiles para obtener electricidad. Algo que actualmente es muy conveniente porque se están consumiendo más combustibles fósiles de los que se producen, por tanto nos estamos quedando sin reservas.
+
+<br><br><br>-Daña menos al medio ambiente
+La producción de este tipo de energía provoca un daño menor al medio ambiente, ya que se evita la emisión de gases de efecto invernadero así como el uso de combustibles fósiles. Evidentemente, los daños no son nulos, pero en este sentido se consideran menores. Esto, obviamente, siempre y cuando no se produzca un accidente nuclear.
+
+Esta visión es la que defienden los que están a favor del uso de este tipo de energía, pero todo tiene inconvenientes, como veremos a continuación, los cuales son usados en las explicaciones de quienes están en contra de su uso. No obstante, hay que ver que todos estos argumentos mencionados, positivos y negativos, son reales. Aquí puedes aprender más sobre Cómo afecta la energía nuclear al medio ambiente.
+
+<br><br></FONT></p>
+
+
+<p align="center">
+<img src="C:\Users\DELL\Desktop\proyectoT\imgt2.jpg" width=245 height=132>
+</p>
+
+
+
+	<h2 align="center"> Desventajas de la energía nuclear por fisión </h2>
+
+<p> <FONT COLOR="Black" SIZE="3" FACE = "Exotc350 Bd BT">Existen riesgos de la energía nuclear, los cuales ya se han sufrido a lo largo de la Historia, por tanto no son solo teóricos. ¿Cuáles son las desventajas de una central nuclear y la energía que produce? ¿Cuáles son los inconvenientes de la energía atómica o nuclear? Parece que sea un tema que el público en general a estas altura ya tiene bastante claro, debido a los distintos accidentes que ha habido a lo largo de los años, pero en realidad son muchas las personas que todavía se hacen estas preguntas, porque realmente todavía no conocen bien este tipo de energía. Presta atención porque son varios los inconvenientes y, además, tienen un gran efecto negativo en el planeta:
+
+<br><br><br>-No se ahorra tanto en combustibles fósiles
+Aunque es un argumento muy comentado como ventaja, la realidad es que la gran cantidad de combustible fósiles y de producción de gases de efecto invernadero se usa para los transportes, no de la producción de electricidad. Por tanto, no se ahorra tanto en este sentido y los materiales necesarios para la energía atómica, mayormente, se transportan hasta las plantas usando combustibles fósiles.
+
+<br><br><br>-Se producen desechos radiactivos
+Como hemos comentado antes, parte de los residuos del resultado de la fisión nuclear producen radiación, mucha más que el propio uranio. Es el caso del plutonio, que se almacena en piscinas dentro de las plantas nucleares o en contenedores, en principio altamente seguros, para ser enterrados a gran profundidad en distintas zonas del planeta para evitar que contaminen el entorno. A estos lugares se les conoce como cementerios nucleares.
+
+<br>Realmente son desechos de muy difícil eliminación y peligrosos y, además, pueden darse vertidos tóxicos o escapes que contaminen de forma grave el medio ambiente. Algunos resultados de tal desastre con estos residuos peligrosos son la pérdida de biodiversidad y la malformación del cuerpo de seres vivos en crecimiento y en fetos, además de problemas de salud graves como el cáncer.
+
+Accidentes nucleares
+<br><br><br>-Los accidentes nucleares son raros, pero son muy peligrosos. Aunque las centrales cuentan con sistemas de seguridad muy sofisticados, se han dado accidentes que han resultado devastadores, es el caso de Chernóbil y Fukushima. En ambos casos, el problema se dio cuando apareció un imprevisto durante la fisión y las personas al cargo tomaron decisiones equivocadas o no llegaron a tiempo. Por tanto, por más sistemas de seguridad que haya siempre existe el factor humano, por lo que pueden cometerse errores.
+
+<br>El accidente nuclear de Chernóbil o Chernobyl fue el peor de la Historia y el accidente nuclear de Fukushima no fue tan grave como el primero pero igualmente produjo grandes problemas. En un accidente de este tipo, una gran cantidad de kilómetros a la redonde quedan afectados por la radiactividad, mueren seres vivos, el agua y el alimento quedan totalmente contaminados, también se producen enfermedades graves como malformaciones y cáncer, etcétera. Además, el medio ambiente de esta zona puede tardar varias décadas o algún siglo en comenzar a recuperarse bien.
+
+<br><br><br>-Armas nucleares para la guerra gracias a la energía atómica
+Otra desventaja alarmante es el uso que se le da a la energía nuclear en el área militar. La industria militar hizo uso de la energía atómica construyendo dos bombas atómicas o nucleares, las cuales se lanzaron por parte de Estados Unidos de América sobre Japón, en Hiroshima y Nagasaki, durante la Segunda Guerra Mundial.
+
+<br>El resultado de las bombas de Hiroshima y Nagasaki fue tan devastador que este fue el primer y único caso en el que se ha llegado a usar este tipo de energía para la guerra. De hecho, diversos países firmaron el conocido Tratado de No Proliferación Nuclear, aunque siempre habrá riesgo de que se vuelva a utilizar.
+
+<br><br><br>-Aumenta nuestra dependencia de uranio
+Si se usa habitualmente y cada vez está más extendido su uso en todo el mundo, el uranio cada vez será más demandado. Esto implicará una sobreexplotación y llegará el punto en el que las reservas no serán suficientes y aparecerá una gran dependencia, pudiendo variar mucho los precios y la disponibilidad, igual que sucede con los combustibles fósiles.
+
+<br><br><br>-Las centrales nucleares son muy costosas
+Por último, las plantas nucleares son muy costosas de construir y de mantener, suponen una gran inversión y no todos los países están preparados para poder realizarlo. Además, hay países que no disponen de lugares de extracción de uranio, por lo que de nuevo dependerán de otros países para obtener esta energía.
+
+<br><br></FONT></p>
+
+
+<p align="center">
+<img src="C:\Users\DELL\Desktop\proyectoT\imgt4.jpg" width=245 height=132>
+</p>
+
+
+
+
+<h2 align="center"> Ventajas y desventajas de la fusion nuclear </h2>
+
+<p> <FONT COLOR="Black" SIZE="3" FACE = "Exotc350 Bd BT">Como hemos comentado, existen dos formas de obtener la energía eléctrica gracias a la energía atómica: la fisión y la fusión. No obstante, solo la conseguimos de forma artificial a través de la fisión, es decir, separando los núcleos de los átomos del uranio. Por tanto, hoy en día para producir electricidad con este sistema solo se realizan fisiones en las centrales nucleares, gracias a los reactores nucleares, y no se hacen fusiones, aunque se sigue investigando y hay centros especializados para desarrollar esta técnica. Por tanto, esta es una de las principales desventajas de la fusión nuclear.
+
+<br><br>En principio, la inviabilidad de esta forma de obtención de esta energía se debe a que existe una gran dificultad para calentar el gas, ya que se requieren temperaturas muy altas y constantes, así como al hecho de tener que mantener un número suficiente de núcleos durante el tiempo requerido para poder obtener una cantidad de energía más elevada que la gastada en el proceso. Todo esto, además de difícil es un proceso muy costoso.
+
+<br><br>Así, de momento, la fusión nuclear no se puede aplicar en la generación de electricidad, pero sí se sabe, observado este fenómeno y comparando con la fisión, que podría ofrecer importantes ventajas frente a la fisión nuclear, como las siguientes:
+
+<br><br>-La fusión nuclear implicaría una fuente de combustible que prácticamente no se podría agotar.
+<br><br>-Se evitarían las reacciones en cadena y otros problemas que se dan en el reactor nuclear, los cuales provocan grandes desastres.
+<br><br>-<br><br>-Los residuos que se generan en la fusión son menos radiactivos.
+
+
+
+
+<br><br></FONT></p><br><br></FONT></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script type="text/javascript">
+function abrir() {
+	window.open("popup.html","ventana", "width=300 , height=400, resizable=no, toolbar=yes, menubar=yes, status=yes, scrollbars=no");
+}
+</script>
+</head>
+
+<body>
+<input type="button" value="Abrir Ventana" onclick="abrir()"/>
+
+
+
+
+<embed src="C:\Users\DELL\Desktop\proyectoT\vidt.mp4"> <embed src="C:\Users\DELL\Desktop\proyectoT\aut.mp3">
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+
+<script type="text/javascript">
+var popup;
+
+function abrir() {
+	  popup = window.open("popup.html","_blank", "width=300 , height=400, resizable=no, toolbar=yes, menubar=yes, status=yes, scrollbars=no");
+}
+function  recibirMensaje(mensaje) {
+	document.getElementById("mensaje").innerHTML = mensaje;
+}
+	
+</script>
+</head>
+
+<body>
+<input type="button" value="Abrir Ventana" onclick="abrir()"/>
+
+<p><a href="javascript:window.close()">Cerrar</a></p>
+
+<input type="button" value="Comunicacion con la ventana" onclick="popup.recibirMensaje('Hola desde tu dueño')" />
+
+<p id="mensaje"></p>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="form.js"></script>
+<title>Documento sin título</title>
+<style type="text/css">
+
+form {
+	width: 300px;
+	margin: auto;
+}
+label {
+	width: 200px;
+	display: block;
+	margin: 10px;
+	float: left;
+}
+ input[type=text], select {
+	 width: 200px;
+	 float: left;
+ }
+ button {
+	 display: block;
+	 clear: both;
+	 margin-left: 200px;
+ }
+ ul {
+	 list-style: none;
+	 margin: 0px;
+ }
+ li {
+	 margin: 0px;
+	 padding: 0px;
+	 height: 80px;
+ }
+ 
+ .enfoco {
+	 background-color: #9F9;
+	 border: 1px solid green;
+ }
+ .ayuda {
+	 font-size: xx-small;
+	 color: green;
+ }
+ input.error {
+	 background-color: #FF9;
+	 border: 1px solid red;
+ }
+	 
+ </style>
+ </head>
+
+
+
+<body>
+<form onsubmit="return validar();">
+<ul>
+
+<li>
+<label for="nombre">Nombre</label>
+<input type="text" id="nombre" name="nombre" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this);revisarObligatorio(this); revisarLongitud(this, 2)"/>
+</li>
+<li>
+<label for="direccion">Direccion</label>
+<input type="text" id="direccion" name="direcciom" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this);revisarObligatorio(this); revisarLongitud(this, 8)"/>
+</li>
+<li>
+<label for="edad">Edad</label>
+<input type="text" id="edad" name="edad" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarNumerico(this)"/>
+</li>
+<li>
+<label for="email">E-mail</label>
+<input type="text" id="email" name="email" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this); revisarEmail(this)"/>
+</li>
+<li>
+<label for="estadocivil">Estado Civil</label>
+<select id="estadocivil" name="estadocivil">
+        <option value="">Seleccione</option>
+        <option>Soltero/a</option>
+        <option>Casado/a></option>
+        <option>Viudo/a</option>
+        <option>Divorciado/a</option>
+</select>
+</li>
+<li>
+<label>       
+<input type="checkbox" value="SI"/>
+Acepto las condiciones
+</label>
+</li>
+</ul>
+
+<button>Registrarme</button>
+</form>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<script type="text/javascript">
+function recibirMensaje(mensaje) {
+	alert(mensaje);
+}
+</script>
+</head>
+
+<body>
+
+<h1>Esta es la ventana principal</h1>
+
+<iframe src="contenido.html" width="1032" height="500"id="iframe1"></iframe>
+
+
+
+<script type="text/javascript">
+function inicializar() {
+	var link = document.getElementById("link");
+	var Caja = document.getElementById("cajacontenido");
+	link.href = "https://www.video2brain.com/es";
+	
+	Caja.style.background = "red";
+	Caja.style.height = "100px";
+	Caja.style.border = "1px solid black";
+	
+}
+function cambiarLink() {
+	document.getElementById("link").href = "https://www.video2brain.com/es";
+}
+</script>
+
+<body onload="inicializar()">
+<div id= "cajacontenido" onmouseover="this.style.backgroundColor='green'"
+onmouseout="this.style.backgroundColor='red'">
+
+
+<script type="text/javascript">
+function inicializar() {
+	var link = document.getElementById("linkV2B");
+	var caja = document.getElementById("cajaContenido");
+	link.href = "https://es.wikipedia.org/wiki/Red_neuronal_artificial";
+}
+function cambiarLink() {
+	document.getElementById("linkV2B").href = "https://twenergy.com/energia/energia-nuclear/ventajas-de-la-energia-nuclear/";
+}
+</script>
+
+</head>
+
+<body onload="inicializar()">
+<div id= "cajaContenido">
+
+<a id="linkV2B" href="https://twenergy.com/energia/energia-nuclear/ventajas-de-la-energia-nuclear/">ventajas de la energia nuclear</a>
+<input type="button" onclick="cambiarLink()"/>
+</body>
+
+
+
+
+</body>
+</html>
